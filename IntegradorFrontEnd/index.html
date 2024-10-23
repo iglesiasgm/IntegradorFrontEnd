@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IntegradorFrontEnd</title>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container__principalHeader">
+          <div class="container__contentHeader">
+            <div class="headerSearch">
+              <input type="text" id="inputHeader" class="inputHeader" placeholder="Ingrese un Elemento"/>
+              <button id="buttonSearch" class="buttonSearch">Buscar</button>
+            </div>
+            <div>
+              <button class="header__buttonAdd" id="openModal">Agregar Elemento</button>
+            </div>
+          </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+     <main>
+        <div class="container__View">
+          <aside class="listAside">
+            <h2>Categorias</h2>
+            <ul id="listFilter"></ul>
+          </aside>
+          <div class="store" id="storeContainer"/>
+
+
+          
+        </div>
+        <!-- poup -->
+
+         <div class="popUpContainer" id="modal">
+          <div class="popUpWrapper">
+            <button class="closeModal" id="closeModal">X</button>
+            <h1>Agregar o modificar un producto</h1>
+            <form class="parteFormulario">
+              <input placeholder="Ingrese un nombre" id="nombre" type="text"/>
+            <input placeholder="Precio" value="0" id="precio" type="number"/>
+            <input placeholder="Ingrese una imagen" id="img" type="text"/>
+            <select id="categoria">
+              <option disabled selected hidden value="">Seleccione una categoría</option> 
+              <option>Gaseosas</option> 
+              <option>Hamburguesas</option> 
+              <option>Papas</option> 
+            </select>
+            <div class="containerButtons__popUP">
+              <button class="buttonPopUP accept" id="acceptButton">Aceptar</button>
+              <button class="buttonPopUP cancel" id="cancelButton">Cancelar</button>
+              <button class="buttonPopUP delete" id="deleteButton">Eliminar</button>
+            </div>
+            </form>
+          </div>
+         </div>
+     </main>
+    <script type="module" src="./src/services/categories.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
